@@ -8,8 +8,8 @@ export const MyModal = ({children, visible, setVisible}) => {
         rootClasses.push(styles.active)
 
     return (
-        <div className={rootClasses.join(' ')}>
-            <div className={styles.myModalContent}>
+        <div className={rootClasses.join(' ')} onClick={() => setVisible(false)}>
+            <div className={styles.myModalContent} onClick={e => e.stopPropagation()}>
                 {children}
             </div>
         </div>
