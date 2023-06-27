@@ -42,6 +42,7 @@ function App() {
       <MyButton onClick={() => setModal(true)}>Создать пользователя</MyButton>
       <MyModal visible={modal} setVisible={setModal}>
         <PostForm create={createPost} />
+        <MyButton onClick={() => setModal(false)}>Закрыть</MyButton>
       </MyModal>
       <hr style={{margin: "15px 0"}}/>
       <PostFilter
