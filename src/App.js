@@ -31,6 +31,7 @@ function App() {
 
   const createPost = (newPost) => {
       setPosts([...posts, newPost]);
+      setModal(false);
   }
 
   const removePost = (post) => {
