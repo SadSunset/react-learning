@@ -1,3 +1,5 @@
+import {useMemo} from 'react';
+
 export const useSortedPosts = (posts, sort) => {
     const sortedPosts = useMemo(() => {
         if (sort)
