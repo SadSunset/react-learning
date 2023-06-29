@@ -7,6 +7,7 @@ import { MyModal } from './components/UI/MyModal/MyModal';
 import { MyButton } from './components/UI/button/MyButton';
 import { usePosts } from './hooks/usePost';
 import PostService from './API/PostService';
+import { Loader } from './components/UI/Loader/Loader';
 
 function App() {
   const [posts, setPosts] = useState([])
@@ -51,7 +52,7 @@ function App() {
         setFilter={setFilter}
       />
       {isPostsLoading ?
-      <h1 style={{textAlign: "center"}}>Загрузка данных...</h1> :
+      <div style={{display: 'flex', justifyContent: 'center', marginTop: '150px'}}><Loader/> </div>:
       <PostList post={sortedAndSearchedPosts} title="Список постов JS" remove={removePost} />
       }
     </div>
