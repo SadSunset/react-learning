@@ -4,7 +4,6 @@ import React from "react";
 export const Pagination = ({totalPages, page, changePage}) => {
     let pagesArray = getPagesArray(totalPages);
 
-
     return (
         <div className="page__wrapper">
             {pagesArray.map(p =>
