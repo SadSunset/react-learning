@@ -3,6 +3,7 @@ import React from "react";
 
 export const Pagination = ({totalPages, page, changePage}) => {
     let pagesArray = getPagesArray(totalPages);
+    console.log('1')
 
     return (
         <div className="page__wrapper">
